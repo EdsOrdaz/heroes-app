@@ -26,15 +26,14 @@ export const SearchPage = () => {
 
   return (
     <>
-        <h1> Search</h1>
+        <h1> Buscar</h1>
         <hr />
 
         <div className="row">
           <div className="col-5">
-              <h4> Searching </h4>
               <form onSubmit={ handleSubmit }>
                 <input type="text"
-                  placeholder="Search a hero"
+                  placeholder="Buscar heroe"
                   className="form-control"
                   name="searchText"
                   autoComplete="off"
@@ -44,19 +43,19 @@ export const SearchPage = () => {
               </form>
 
               <button type='submit' className="btn btn-outline-primary mt-1">
-                  Search
+                  Buscar
               </button>
           </div>
 
           <div className="col-7">
-              <h4> Results </h4>
+              <h4> Resultados </h4>
               <hr />
 
               {
                   ( q === '')
-                  ? <div className="alert alert-primary animate__animated animate__fadeInRight"> Search a hero </div>
+                  ? <div className="alert alert-primary animate__animated animate__fadeInRight"> Buscar heroe </div>
                   : ( heroes.length < 1) 
-                      && <div className="alert alert-danger animate__animated animate__fadeInRight">No hero with <b>{ q }</b></div>
+                      && <div className="alert alert-danger animate__animated animate__fadeInRight">No hay ningun heroe con el nombre <b>{ q }</b></div>
               }
               
 

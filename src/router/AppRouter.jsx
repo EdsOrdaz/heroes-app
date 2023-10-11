@@ -23,7 +23,7 @@ import { LoginPage } from "../auth";
         { path: "dc", element: <DcPage /> },
         { path: "search", element: <SearchPage /> },
         { path: "hero/:heroId", element: <HeroPage /> },
-        { path: "/*", element: <Navigate to="/" /> },
+        { path: "/*", element: <Navigate to="/marvel" /> },
       ],
     },
   ]);
