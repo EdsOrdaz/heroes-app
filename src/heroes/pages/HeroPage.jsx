@@ -19,16 +19,19 @@ export const HeroPage = () => {
     navigate(-1)
   }
 
+  const heroImageUrl = `./heroes/${ heroId }.jpg`;
+  console.log( heroImageUrl );
+
   return (
     <div className="row mt-5">
       <div className="col-4 animate__animated animate__fadeInLeft">
-        <img src={ `/assets/heroes/${ heroId }.jpg` } alt={ hero.superhero } 
+        <img src={ heroImageUrl } alt={ hero.superhero } 
         className="img-thumbnail" />
       </div>
 
       <div className="col-8">
         <h3> { hero.superhero }</h3>
-        <ul className="list-group list-group-flush">
+        <ul className="list-group list-group-flush bg-dark">
             <li className="list-group-item"> <b> Nombre:</b> { hero.alter_ego }</li>
             <li className="list-group-item"> <b> Editor:</b> { hero.publisher }</li>
             <li className="list-group-item"> <b> Primera aparicion:</b> { hero.first_appearance }</li>
@@ -48,3 +51,6 @@ export const HeroPage = () => {
     </div>
   )
 }
+
+
+
