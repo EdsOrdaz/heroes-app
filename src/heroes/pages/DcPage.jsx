@@ -1,4 +1,4 @@
-import { HeroList } from "../components"
+import { HeroList } from "../components/HeroList"
 
 export const DcPage = () => {
   return (

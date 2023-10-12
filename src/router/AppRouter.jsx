@@ -1,15 +1,17 @@
 import {
     createBrowserRouter,
     Navigate,
-    Route,
     RouterProvider,
-    Routes,
   } from "react-router-dom";
 import { HeroesApp } from "../HeroesApp";
-import { DcPage, HeroPage, MarvelPage, SearchPage } from "../heroes";
-import { AuthProvider, LoginPage } from "../auth";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
+import { MarvelPage } from "../heroes/pages/MarvelPage";
+import { DcPage } from "../heroes/pages/DcPage";
+import { SearchPage } from "../heroes/pages/SearchPage";
+import { HeroPage } from "../heroes/pages/HeroPage";
+import { LoginPage } from "../auth/pages/LoginPage";
+import { AuthProvider } from "../auth/context/AuthProvider";
 
 
   const router = createBrowserRouter([

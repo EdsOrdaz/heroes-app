@@ -1,5 +1,8 @@
 import { useReducer } from 'react'
-import { AuthContext, authReducer, types } from '../'
+import { AuthContext } from './AuthContext';
+import { authReducer } from './authReducer';
+import { types } from '../types/types';
+// import { AuthContext, authReducer, types } from '../'
 
 
 const init = () => {
