@@ -7,17 +7,26 @@ import {
   } from "react-router-dom";
 import { HeroesApp } from "../HeroesApp";
 import { DcPage, HeroPage, MarvelPage, SearchPage } from "../heroes";
-import { LoginPage } from "../auth";
+import { AuthProvider, LoginPage } from "../auth";
+import { PrivateRoute } from "./PrivateRoute";
+import { PublicRoute } from "./PublicRoute";
 
 
   const router = createBrowserRouter([
     {
       path: "/login",
-      element: <LoginPage />,
+      element: (
+        <PublicRoute>
+            <LoginPage />
+        </PublicRoute>),
     },
     {
       path: "/",
-      element: <HeroesApp />,
+      element: (
+        <PrivateRoute>
+            <HeroesApp />
+        </PrivateRoute>
+      ),
       children: [
         { path: "marvel", element: <MarvelPage /> },
         { path: "dc", element: <DcPage /> },
@@ -30,8 +39,8 @@ import { LoginPage } from "../auth";
 
 export const AppRouter = () => {
   return (
-    <>
+    <AuthProvider>
         <RouterProvider router={router} />
-    </>
+    </AuthProvider>
   )
 }
