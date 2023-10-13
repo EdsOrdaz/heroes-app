@@ -28,11 +28,11 @@ import { SearchProvider } from "../ui/provider/SearchProvider";
         </PrivateRoute>
       ),
       children: [
-        { path: "/marvel", element: <MarvelPage />},
-        { path: "/dc", element: <DcPage /> },
-        { path: "/search", element: <SearchPage /> },
-        { path: "/hero/:heroId", element: <HeroPage /> },
-        { path: "/*", element: <Navigate to="/marvel" /> },
+        { path: "marvel", element: <MarvelPage />},
+        { path: "dc", element: <DcPage /> },
+        { path: "search", element: <SearchPage /> },
+        { path: "hero/:heroId", element: <HeroPage /> },
+        // { path: "/*", element: <Navigate to="/marvel" /> },
       ],
     },
   ]);
