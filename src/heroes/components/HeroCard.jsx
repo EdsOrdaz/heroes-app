@@ -10,7 +10,7 @@ export const HeroCard = ( {
     characters,
 } ) => {
 
-    const heroImageUrl = `./heroes/${ id }.jpg`;
+    const heroImageUrl = `/heroes/${ id }.jpg`;
 
     return (
         <Link to={`/hero/${id}`} className="my-card animate__animated animate__fadeIn mx-2">
