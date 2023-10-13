@@ -19,8 +19,7 @@ export const HeroPage = () => {
     navigate(-1)
   }
 
-  const heroImageUrl = `./heroes/${ heroId }.jpg`;
-  console.log( heroImageUrl );
+  const heroImageUrl = `/heroes/${ heroId }.jpg`;
 
   return (
     <div className="row mt-5">
@@ -31,10 +30,10 @@ export const HeroPage = () => {
 
       <div className="col-8">
         <h3> { hero.superhero }</h3>
-        <ul className="list-group list-group-flush bg-dark">
-            <li className="list-group-item"> <b> Nombre:</b> { hero.alter_ego }</li>
-            <li className="list-group-item"> <b> Editor:</b> { hero.publisher }</li>
-            <li className="list-group-item"> <b> Primera aparicion:</b> { hero.first_appearance }</li>
+        <ul className="list-group bg-transparent color-primary">
+            <li className="list-group-item bg-transparent text-white"> <b> Nombre:</b> { hero.alter_ego }</li>
+            <li className="list-group-item bg-transparent text-white"> <b> Editor:</b> { hero.publisher }</li>
+            <li className="list-group-item bg-transparent text-white"> <b> Primera aparicion:</b> { hero.first_appearance }</li>
         </ul>
 
 
