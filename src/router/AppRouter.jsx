@@ -14,7 +14,7 @@ import { SearchProvider } from "../ui/provider/SearchProvider";
 
   const router = createBrowserRouter([
     {
-      path: "./login",
+      path: "/login",
       element: (
         <PublicRoute>
             <LoginPage />
@@ -32,7 +32,7 @@ import { SearchProvider } from "../ui/provider/SearchProvider";
         { path: "dc", element: <DcPage /> },
         { path: "search", element: <SearchPage /> },
         { path: "hero/:heroId", element: <HeroPage /> },
-        // { path: "/*", element: <Navigate to="/marvel" /> },
+        { path: "/*", element: <Navigate to="/marvel" /> },
       ],
     },
   ]);

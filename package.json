@@ -2,8 +2,8 @@
   "name": "heroes-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "homepage": "https://edsordaz.github.io/heroes-app/", 
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
