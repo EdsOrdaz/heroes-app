@@ -39,7 +39,7 @@ export const LoginPage = () => {
             />
             <hr />
 
-            <div class="d-grid col-2">
+            <div className="d-grid col-2">
             <button className="btn btn-primary" type="submit">
               Entrar
             </button>
