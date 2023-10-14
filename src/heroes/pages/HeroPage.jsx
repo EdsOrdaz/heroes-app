@@ -21,7 +21,7 @@ export const HeroPage = () => {
     navigate(-1)
   }
 
-  const heroImageUrl = `/heroes/${ heroId }.jpg`;
+  const heroImageUrl = `./heroes/${ heroId }.jpg`;
 
   return (
     <div className="row mt-5">
