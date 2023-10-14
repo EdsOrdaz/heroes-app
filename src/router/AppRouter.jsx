@@ -42,7 +42,7 @@ export const AppRouter = () => {
     <AuthProvider>
       <SearchProvider>
         <RouterProvider router={router} />
-        </SearchProvider>
+      </SearchProvider>
     </AuthProvider>
   )
 }
