@@ -14,27 +14,20 @@ import { HeroesRoutes } from "../heroes/router/HeroesRoutes";
 export const AppRouter = () => {
   return (
     <Routes>
-            
-            <Route path="./login/*" element={
-                <PublicRoute>
-                  {/* <LoginPage /> */}
-                  <Routes>
-                    <Route path="/*" element={<LoginPage />} />
-                  </Routes>
-                </PublicRoute>
-              }
-            />
-            
-            <Route path="./*" element={
-              <PrivateRoute>
-                <HeroesRoutes />
-              </PrivateRoute>
-            } />
+                
+        <Route path='/login' element={
+          <PublicRoute>
+            < Login />
+          </PublicRoute>
+        }/>
 
-            {/* <Route path="login" element={<LoginPage />} /> */}
-            {/* <Route path="/*" element={ <HeroesRoutes />} /> */}
-            
-
-        </Routes>
+        {/* Al poner /* garantizo que cualquier ruta que no sea login me lleve a HeroresRoutes */}
+          <Route path='/*' element={
+            <PrivateRoute>
+              {/* Al poner el componente HeroesRoutes aqui garantizo que quien no se encuentre loggeado no pueda acceder a estas rutas*/}
+              <HeroesRoutes />
+            </PrivateRoute>
+        } />              
+    </Routes>
   )
 }
