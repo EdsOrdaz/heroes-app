@@ -15,14 +15,14 @@ export const AppRouter = () => {
   return (
     <Routes>
                 
-        <Route path='login' element={
+        <Route path='/login' element={
           <PublicRoute>
             < Login />
           </PublicRoute>
         }/>
 
         {/* Al poner /* garantizo que cualquier ruta que no sea login me lleve a HeroresRoutes */}
-          <Route path='*' element={
+          <Route path='/*' element={
             <PrivateRoute>
               {/* Al poner el componente HeroesRoutes aqui garantizo que quien no se encuentre loggeado no pueda acceder a estas rutas*/}
               <HeroesRoutes />
