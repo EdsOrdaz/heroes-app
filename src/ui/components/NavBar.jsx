@@ -56,7 +56,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark p-2 mx-3">
             
-            <img src="/logo.png" alt="Bootstrap" width="400" height="100" className='mr-5'/>
+            <img src="./logo.png" alt="Bootstrap" width="400" height="100" className='mr-5'/>
 
             <div className="navbar-collapse ml-5">
                 <div className="navbar-nav">
