@@ -8,10 +8,10 @@ import { HeroesApp } from './HeroesApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <BrowserRouter basename={"/heroes-app"}>
-      {/* <HashRouter> */}
+      {/* <BrowserRouter basename={"/heroes-app"}> */}
+      <HashRouter>
         <HeroesApp />
-      {/* </HashRouter> */}
-      </BrowserRouter>
+      </HashRouter>
+      {/* </BrowserRouter> */}
   </React.StrictMode>,
 )
