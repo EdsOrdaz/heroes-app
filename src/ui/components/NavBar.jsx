@@ -54,53 +54,40 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark p-2 mx-3">
-            
-            <img src="./logo.png" alt="Bootstrap" width="400" height="100" className='mr-5'/>
+        <nav className="navbar navbar-expand-lg bg-secondary">
+            <div className="container-fluid">
+                <img src="./logo.png" alt="Heroes" width="100" height="50" className='mr-5'/>
+                <div className="collapse navbar-collapse">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <NavLink className="nav-item nav-link" to="/marvel"><h4>Marvel</h4></NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-item nav-link" to="/dc"><h4>DC</h4></NavLink>
+                        </li>
+                    </ul>
 
-            <div className="navbar-collapse ml-5">
-                <div className="navbar-nav">
+                    <div className="navbar-nav me-auto justify-content-center">
+                        <ul className="navbar-nav">
+                            <span className='nav-item nav-link text-black'><h2>Bienvenido</h2></span> 
+                            <span className='nav-item nav-link text-warning'> <h2>{ user?.name } </h2> </span>
+                        </ul>
+                    </div>
 
-                    <NavLink className="nav-item nav-link" to="/marvel">
-                        <h3>Marvel</h3>
-                    </NavLink>
-
-                    <NavLink className="nav-item nav-link" to="/dc">
-                        <h3>DC</h3>
-                    </NavLink>
-                    {/* <NavLink className="nav-item nav-link" to="/search">
-                        Buscar
-                    </NavLink> */}
+                    <form className="d-flex" role="search">
+                    <input className="form-control me-2" 
+                            type="search" 
+                            placeholder="Buscar Heroe" 
+                            aria-label="Search" 
+                            name="buscarHeroe"
+                            autoComplete='off'
+                            value={ buscarHeroe }
+                            onChange={ onBuscarHeroe }
+                        />
+                    </form>
+                    <button className="btn btn-danger" onClick={ onLogout } type="submit">Cerrar Sesion</button>
                 </div>
             </div>
-
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                <ul className="navbar-nav">
-                    <span className='nav-item nav-link text-white'><h2>Bienvenido</h2></span> 
-                    <span className='nav-item nav-link text-info'> <h2>{ user?.name } </h2> </span>
-                </ul>
-            </div>
-
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-
-                
-                <form className="d-flex mx-5" onSubmit={ onSubmit }>
-                    <input className="form-control mx-2" 
-                        type="search" 
-                        placeholder="Buscar Heroe" 
-                        aria-label="Search" 
-                        name="buscarHeroe"
-                        autoComplete='off'
-                        value={ buscarHeroe }
-                        onChange={ onBuscarHeroe }
-                    />
-                    {/* <button className="btn btn-outline-info btn-sm" type="submit">Buscar</button> */}
-                </form>
-                <button className="btn btn-outline-warning btn-sm" onClick={ onLogout }>Cerrar Sesion</button>
-
-
-            </div>
-            
         </nav>
     )
 }
