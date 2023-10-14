@@ -6,12 +6,14 @@ export const HeroPage = () => {
 
   const { heroId } = useParams();
   
+  console.log( heroId );
   // const hero = getHeroById( heroId );
   const hero = useMemo(() => getHeroById( heroId ), [ heroId ]);
 
-  if( !hero ){
-    return <Navigate to="/marvel" />
-  }
+
+  // if( !hero ){
+  //   return <Navigate to="/marvel" />
+  // }
 
   const navigate = useNavigate();
 
@@ -19,7 +21,7 @@ export const HeroPage = () => {
     navigate(-1)
   }
 
-  const heroImageUrl = `heroes/${ heroId }.jpg`;
+  const heroImageUrl = `/heroes/${ heroId }.jpg`;
 
   return (
     <div className="row mt-5">
