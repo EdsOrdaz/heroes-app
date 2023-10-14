@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext";
 import { useForm } from "../../hooks/useForm";
 
+import "../css/style.css";
+
 export const LoginPage = () => {
 
   const { login } = useContext(AuthContext);
