@@ -15,7 +15,7 @@ export const AppRouter = () => {
   return (
     <Routes>
             
-            <Route path="login/*" element={
+            <Route path="./login/*" element={
                 <PublicRoute>
                   {/* <LoginPage /> */}
                   <Routes>
@@ -25,7 +25,7 @@ export const AppRouter = () => {
               }
             />
             
-            <Route path="/*" element={
+            <Route path="./*" element={
               <PrivateRoute>
                 <HeroesRoutes />
               </PrivateRoute>
