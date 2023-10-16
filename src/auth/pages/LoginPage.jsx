@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext";
 import { useForm } from "../../hooks/useForm";
 
-import "../css/style.css";
+import "../css/login.css";
 
 export const LoginPage = () => {
 
@@ -27,27 +27,27 @@ export const LoginPage = () => {
 
   return (
     <>
-      <div className="container mt-5">
-          <h1>Ingresa tu nombre</h1>
-          <br />
-          <form onSubmit={ onLogin }>
-            <input 
-              type="text" 
-              className="form-control" 
-              autoComplete="off"
-              name="textLogin"
-              value={ textLogin }
-              onChange={ handleLogin }
-            />
-            <hr />
-
-            <div className="d-grid col-2">
-            <button className="btn btn-primary" type="submit">
-              Entrar
-            </button>
-            </div>
-          </form>
+      <div className="background">
+          <div className="shape"></div>
+          <div className="shape"></div>
       </div>
+      <form className="formlogin" onSubmit={ onLogin }>
+        <h3>Login</h3>
+
+        <label>Nombre</label>
+        <input type="text" 
+            placeholder="Ingresa tu nombre" 
+            autoComplete="off"
+            name="textLogin"
+            value={ textLogin }
+            onChange={ handleLogin }
+            className="logininput"
+          />
+
+        <button className="loginbutton" type="submit">Entrar</button>
+      </form>
     </>
   )
 }
+
+
