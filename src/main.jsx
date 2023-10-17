@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'animate.css';
 import './style.css';
 import { HashRouter } from 'react-router-dom';
 import { HeroesApp } from './HeroesApp';

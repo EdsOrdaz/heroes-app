@@ -2,7 +2,7 @@
   "name": "heroes-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://edsordaz.github.io/heroes-app", 
+  "homepage": "https://edsordaz.github.io/heroes-app",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.2",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "query-string": "^8.1.0",
