@@ -2,7 +2,6 @@ import { useContext } from "react"
 import { HeroList } from "../components/HeroList"
 import { SearchContext } from "../../ui/context/searchContext";
 import { getHeroesByName } from "../helpers/getHeroesByName";
-import { HeroCard } from "../components/HeroCard";
 import { Search } from "../../ui/components/Search";
 
 export const MarvelPage = () => {

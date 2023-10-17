@@ -13,7 +13,7 @@ export const Navbar = () => {
     const location = useLocation();
     const { q = ''} = queryString.parse( location.search );    
 
-    const { buscarHeroe, onInputChange } = useForm({
+    const { buscarHeroe, onInputChange, onResetForm } = useForm({
         buscarHeroe: ''
     });
 
@@ -40,17 +40,17 @@ export const Navbar = () => {
         }
     };
 
+    const handleResetForm = ( event ) => {
+        onResetForm();
+        handleHeroe();
+    }
+
     
     const onLogout = () => {
         logout();
         navigate('login', {
             replace: true
         });
-    }
-
-    const onSubmit = (event) => {
-        event.preventDefault();
-        // handleHeroe( buscarHeroe );
     }
 
     return (
@@ -60,10 +60,10 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink className="nav-item nav-link" to="/marvel"><h4>Marvel</h4></NavLink>
+                            <NavLink className="nav-item nav-link" to="./marvel" onClick={ handleResetForm }><h4>Marvel</h4></NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-item nav-link" to="/dc"><h4>DC</h4></NavLink>
+                            <NavLink className="nav-item nav-link" to="./dc" onClick={ handleResetForm }><h4>DC</h4></NavLink>
                         </li>
                     </ul>
 

@@ -8,7 +8,7 @@ export const useForm = ( initialForm = {} ) => {
         const { name, value } = target;
         setFormState({
             ...formState,
-            [ name ]: value
+            [ name ]: value.toUpperCase()
         });
     }
 
